@@ -1,6 +1,6 @@
 FROM fedora:latest
 
-MAINTAINER Matthew Farrellee <matt@cs.wisc.edu>
+MAINTAINER wuyi <typhoon_1986@163.com>
 
 RUN yum update -y && yum install -y java tar
 

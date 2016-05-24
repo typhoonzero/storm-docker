@@ -1,5 +1,5 @@
 # storm-docker
-storm docker image for full config enable
+storm docker image for production deploy
 # Apache Storm images for Docker
 
 # Build
