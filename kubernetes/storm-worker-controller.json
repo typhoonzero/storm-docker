@@ -8,7 +8,7 @@
     }
   },
   "spec": {
-    "replicas": 2,
+    "replicas": 3,
     "selector": {
       "name": "storm-worker"
     },
@@ -23,7 +23,11 @@
         "containers": [
           {
             "name": "storm-worker",
-            "image": "mattf/storm-worker",
+            "image": "typhoon1986/storm-worker",
+            "command": ["/start.sh", "--storm.zookeeper.servers", "172.24.2.35,172.24.2.36,172.24.2.37",
+                    "--storm.zookeeper.port", "2181",
+                    "--storm.zookeeper.root", "/k8s_storm",
+                    "--nimbus.host"],
             "ports": [
               {
                 "hostPort": 6700,
