@@ -1,6 +1,6 @@
-FROM mattf/storm-base
+FROM typhoon1986/storm-docker
 
-MAINTAINER Matthew Farrellee <matt@cs.wisc.edu>
+MAINTAINER wuyi <typhoon_1986@163.com>
 
 ADD start.sh /
 
