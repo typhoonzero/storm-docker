@@ -1,4 +1,4 @@
-FROM mattf/storm-base
+FROM typhoon1986/storm-docker
 
 MAINTAINER wuyi <typhoon_1986@163.com>
 
