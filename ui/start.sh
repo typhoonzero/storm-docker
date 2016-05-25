@@ -1,5 +1,5 @@
 #!/bin/sh
 
-/storm-nimbus-daemon $2
+/storm-nimbus-daemon $@
 
 exec bin/storm ui
