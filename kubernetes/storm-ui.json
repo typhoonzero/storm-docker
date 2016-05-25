@@ -1,0 +1,31 @@
+{
+  "kind": "Pod",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "storm-ui",
+    "labels": {
+      "name": "storm-ui"
+    }
+  },
+  "spec": {
+    "containers": [
+      {
+        "name": "storm-ui",
+        "image": "typhoon1986/storm-ui",
+        "command": ["/start.sh", "--storm.zookeeper.servers", "172.24.2.35,172.24.2.36,172.24.2.37", 
+                    "--storm.zookeeper.port", "2181",
+                    "--storm.zookeeper.root", "/k8s_storm"],
+        "ports": [
+          {
+            "containerPort": 8080
+          }
+        ],
+        "resources": {
+          "limits": {
+            "cpu": "100m"
+          }
+        }
+      }
+    ]
+  }
+}
