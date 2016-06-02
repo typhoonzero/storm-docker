@@ -62,3 +62,6 @@ fi
 if [ ! -z $NIMBUS_HOST ]; then
   echo "nimbus.host: \"${NIMBUS_HOST}\"" >> conf/storm.yaml
 fi
+# always set storm.local.hostname
+SELF_HOST=$(hostname -I)
+echo $SELF_HOST >> conf/storm.yaml
