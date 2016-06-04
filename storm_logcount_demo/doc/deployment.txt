@@ -1,0 +1,31 @@
+依赖的组件： 
+
+数据流：
+    从线上kafka读取按天的topic
+    结果存入XXXX集群
+	
+数据位置：
+    kafka集群：
+         zk:
+
+监控是否就绪：否，这是个统计类拓扑，监控可以择时加
+
+需要达到的性能指标：消息时延最大可接受1分钟， 吞吐量必须能跟上线上的按天数据（10000/s）
+
+是否可以再平衡/重启：可以
+
+测试报告：
+    测试环境：
+    测试结果：
+    测试性能：
+	
+部署过程：
+    cp stormdemo.tgz /opt/sys/topology
+    cd /opt/sys/topology
+    tar xvf stormdemo.tgz
+    修改 stormdemo/conf/conf.properties以下配置项：
+        kafka_zk_addr： 线上kafka对应的zk集群
+    用crontab -e把conf/crontab.conf中的内容加入
+    运行sh bin/start.sh 启动拓扑
+
+特别注意：
